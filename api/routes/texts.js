@@ -6,7 +6,6 @@ const router = Router();
  */
 router.get('/', (req, res) => {
     const { text } = req.query;
-    console.log(text)
     if(typeof text !== 'string' || text === '') return res.status(400).json({'error':'no text'})
     let textReverse = '';
     for (let i = text.length-1; i > -1; i--) {

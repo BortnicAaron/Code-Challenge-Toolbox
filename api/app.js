@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
     res.json({ message: "‎Bienvenido a la aplicación" });
 });
 
+/**
+ * get texto invertido
+ */
 app.use("/iecho", require("./routes/texts"));
 
 app.listen(3000, () => {

@@ -4,13 +4,17 @@
   "description": "Node + Express - Mocha + Chai + SuperTest",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha tests/test.js --exit"
   },
   "author": "Aaron Bortnic",
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mocha": "^8.3.2",
+    "supertest": "^6.1.3"
   }
 }
