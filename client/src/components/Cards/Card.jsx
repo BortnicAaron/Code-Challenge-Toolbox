@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Card ({ texts }) {
-  console.log(texts)
   return (
     <div class='d-flex justify-content-center'>
       <div class='card' style={{ width: '50%' }}>

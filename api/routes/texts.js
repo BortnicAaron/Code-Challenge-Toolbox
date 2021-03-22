@@ -5,7 +5,6 @@ const router = Router()
  * get texto invertido
  */
 router.get('/', (req, res) => {
-  console.log(req.query)
   const { text } = req.query
   if (typeof text !== 'string' || text === '') return res.status(400).json({ error: 'no text' })
   let textReverse = ''

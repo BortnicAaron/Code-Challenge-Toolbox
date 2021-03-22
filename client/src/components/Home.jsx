@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { addText } from '../Redux/action.jsx'
-import Resultss from './Cards/Results.jsx'
+import Results from './Cards/Results.jsx'
 import Nav from './Nav/Nav.jsx'
 
 export default function Home () {
@@ -20,7 +20,7 @@ export default function Home () {
     <div className='bg-secondary' style={{ minHeight: '100vh' }}>
       <div className='d-grid gap-4'>
         <Nav onSubmit={onSubmit} />
-        {results.length > 0 && <Resultss texts={results} />}
+        {results.length > 0 && <Results texts={results} />}
       </div>
     </div>
   )
