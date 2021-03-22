@@ -11,7 +11,9 @@ export const ADD_TEXT = 'ADD_TEXT'
 export function addText (text) {
   return function (dispatch) {
     return iecho(text).then((data) => {
-      dispatch({ type: ADD_TEXT, payload: data })
+      if (data) {
+        dispatch({ type: ADD_TEXT, payload: data })
+      }
     })
   }
 }

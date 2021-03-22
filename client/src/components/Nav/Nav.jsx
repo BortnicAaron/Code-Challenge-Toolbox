@@ -10,12 +10,13 @@ export default function Nav ({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     onSubmit(text)
+    setText('')
   }
 
   return (
     <nav className='navbar navbar-light bg-danger text-white'>
       <div className='container-fluid justify-content-center'>
-        <form className='d-flex center' onSubmit={(e) => handleSubmit(e)}>
+        <form className='d-flex' onSubmit={(e) => handleSubmit(e)}>
           <input
             value={text}
             className='form-control me-4'
@@ -27,6 +28,7 @@ export default function Nav ({ onSubmit }) {
           <button
             className='btn btn-outline-success bg-primary text-white'
             type='submit'
+            style={{ 'margin-left': '5%' }}
           >Send
           </button>
         </form>
