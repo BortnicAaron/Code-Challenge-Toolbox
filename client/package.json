@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve",
-    "test": "jest",
-    "posttest": "standard --fix"
+    "start": "standard && webpack serve",
+    "test": "jest"
   },
   "author": "Aaron Bortnic",
   "license": "ISC",
@@ -29,6 +28,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@testing-library/react": "^11.2.5",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "react": "^17.0.1",
@@ -37,5 +37,16 @@
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
+  },
+  "standard": {
+    "ignore": [
+      "src/tests/*.test.js"
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "<rootDir>/src/tests/setupT.js"
+    ]
   }
 }

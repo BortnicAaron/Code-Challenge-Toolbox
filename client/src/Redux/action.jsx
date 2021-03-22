@@ -1,22 +1,16 @@
 import axios from 'axios'
 
-
-function errorHandler (err) {
+function errorH (err) {
   console.error(err)
-  // eslint-disable-next-line no-undef
-  alert(`Error:
-    Status: ${err.response.status}
-    Message: ${err.response.data.error}`)
 }
 
-const iecho = (text) => axios.get(`http://localhost:3000/iecho?text=${text}`).catch(errorHandler)
+const iecho = (text) => axios.get(`http://localhost:3000/iecho?text=${text}`).catch(errorH)
 
 export const ADD_TEXT = 'ADD_TEXT'
 
 export function addText (text) {
   return function (dispatch) {
-    return iecho(text).then(( data ) => {
-      console.log(data)
+    return iecho(text).then((data) => {
       dispatch({ type: ADD_TEXT, payload: data })
     })
   }
