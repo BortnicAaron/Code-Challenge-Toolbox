@@ -5,8 +5,8 @@ export default function Nav({ onSubmit }) {
 
   const onChange = (e) => {
     setText(e.target.value)
-
   }
+  
   const handleSubmit = (e) => {
       e.preventDefault()
       onSubmit(text)

@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 function errorHandler (err) {
   console.error(err)
   // eslint-disable-next-line no-undef

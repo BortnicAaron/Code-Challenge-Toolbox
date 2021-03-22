@@ -13,7 +13,7 @@ export default function Card({ textSumbit }) {
           <ul class="list-group list-group-flush flex-column-reverse">
             {textSumbit.map((r) => {
               return (
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between" >
                   {r.data.text}
                   <span class="badge bg-primary">
                     {r.data.palindrome && "Palindrome"}
